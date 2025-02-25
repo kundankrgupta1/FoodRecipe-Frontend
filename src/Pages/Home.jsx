@@ -48,7 +48,7 @@ const Home = () => {
 		);
 	}
 	return (
-		<div className="flex h-screen justify-between items-center flex-col"
+		<div className="flex h-screen justify-start items-center flex-col"
 			style={{ padding: "10px 5px", marginTop: "90px" }}
 		>
 			<div className="flex justify-between items-center gap-8">
@@ -79,22 +79,22 @@ const Home = () => {
 
 			</div>
 
-			<div className="flex gap-4 justify-center items-center"
+			<div className="flex gap-4 flex-wrap md:flex-nowrap justify-center items-center"
 				style={{ marginTop: "20px" }}
 			>
 				{FoodType?.map((item) => {
 					return (
-						<div key={item.id} className="cursor-pointer hover:bg-gray-200 rounded-md w-[110px] h-[110px] flex flex-col gap-2 justify-center items-center"
+						<div key={item.id} className="cursor-pointer hover:bg-gray-200 rounded-md w-[70px] h-[70px] md:w-[110px] md:h-[110px] flex flex-col gap-2 justify-center items-center"
 							style={{ boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px", padding: "8px 12px" }}
 							onClick={() => setType(item?.type)}
 						>
-							<img src={"https://demo.gloriathemes.com/platea/demo/wp-content/uploads/2024/12/appetizers-icon.svg"} className="w-16" alt="" />
-							<p className="text-sm capitalize rowdies-regular">{item?.type}</p>
+							<img src={item?.poster} className="w-10 md:w-16" alt="" />
+							<p className="text-xs md:text-sm capitalize rowdies-regular">{item?.type}</p>
 						</div>
 					)
 				})}
 			</div>
-			<div className="w-full flex justify-between items-center gap-8"
+			<div className="w-full flex flex-col md:flex-row justify-between items-center gap-8"
 				style={{ marginTop: "20px" }}
 			>
 				<div className="flex items-center gap-2">
@@ -102,7 +102,7 @@ const Home = () => {
 					<h1 className="text-3xl rowdies-regular">Find Your Favorite Food</h1>
 				</div>
 				<select name="" id="" onChange={(e) => setLimit(Number(e.target.value))}
-					className="w-full max-w-xs px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-full shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none hover:border-blue-400 transition duration-300"
+					className="hidden md:flex w-full max-w-xs px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-full shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none hover:border-blue-400 transition duration-300"
 					style={{ padding: "8px 12px" }}
 				>
 					<option value="20">20</option>
@@ -141,11 +141,9 @@ const Home = () => {
 										<div className="w-full absolute top-2 flex justify-between items-center"
 											style={{ padding: "6px" }}
 										>
-
 											<button className="bg-yellow-500 text-white p-2 rounded-full flex items-center gap-1" style={{ padding: "6px" }} title="Rate"><FaStar /> 4.8</button>
 
 											<button className="cursor-pointer bg-red-500 text-white p-2 rounded-full" style={{ padding: "6px" }} onClick={() => addFav({ foodId: recipe.id, title: recipe.title, image: recipe.image })}><AiFillHeart size={30} /></button>
-
 										</div>}
 								</div>
 							);

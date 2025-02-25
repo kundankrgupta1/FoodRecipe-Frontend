@@ -3,6 +3,7 @@ import { ContextProvider } from "../Context/ContextAPI";
 import axios from "axios";
 import { SERVER } from "../App";
 import { Link } from "react-router-dom";
+import { MdDelete } from "react-icons/md";
 
 const Profile = () => {
 	const { token } = useContext(ContextProvider);
@@ -21,13 +22,28 @@ const Profile = () => {
 		}
 	};
 
+	const removeFavItems = async (foodId) => {
+		try {
+			const res = await axios.delete(`${SERVER}/fav/${foodId}`, {
+				headers: {
+					Authorization: `Bearer ${token}`,
+				},
+			})
+			fetchProfile()
+			console.log(res);
+		} catch (error) {
+			console.log(error);
+
+		}
+	}
+
 	useEffect(() => {
 		fetchProfile();
 	}, []);
 
 	return (
 		<div className="border max-w-3xl grid grid-cols-1 md:grid-cols-3 gap-8"
-			style={{margin: "100px auto"}}
+			style={{ margin: "100px auto" }}
 		>
 			<div className="bg-white shadow-xl rounded-lg p-6 text-center border border-gray-200">
 				<img
@@ -65,6 +81,10 @@ const Profile = () => {
 									{recipe.title}
 								</h2>
 							</Link>
+							<button className="absolute top-2 right-2 bg-red-500 text-white p-2 rounded flex items-center gap-1"
+								style={{ padding: "6px" }}
+								onClick={() => removeFavItems(recipe?.foodId)}
+							><MdDelete />Delete</button>
 						</div>
 					))}
 				</div>

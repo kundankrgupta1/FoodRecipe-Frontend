@@ -1,7 +1,5 @@
 export const FoodType = [
-	{ type: "main course", poster: "https://cdn-icons-png.flaticon.com/512/5235/5235253.png" }, 
-	{ type: "side dish", poster: "https://cdn-icons-png.flaticon.com/512/5235/5235253.png" }, 
-	{ type: "dessert", poster: "https://cdn-icons-png.flaticon.com/512/5235/5235253.png" }, 
-	{ type: "appetizer", poster: "https://cdn-icons-png.flaticon.com/512/5235/5235253.png" }, { type: "bread", poster: "https://cdn-icons-png.flaticon.com/512/5235/5235253.png" }, { type: "soup", poster: "https://cdn-icons-png.flaticon.com/512/5235/5235253.png" }, { type: "beverage", poster: "https://cdn-icons-png.flaticon.com/512/5235/5235253.png" }, { type: "sauce", poster: "https://cdn-icons-png.flaticon.com/512/5235/5235253.png" }, { type: "fingerfood", poster: "https://cdn-icons-png.flaticon.com/512/5235/5235253.png" }, { type: "snack", poster: "https://cdn-icons-png.flaticon.com/512/5235/5235253.png" }, { type: "drink", poster: "https://cdn-icons-png.flaticon.com/512/5235/5235253.png" }
+	{ type: "main course", poster: "https://i.ibb.co/gLbx3Gfp/main.png" },
+	{ type: "dessert", poster: "https://i.ibb.co/JFSgmtgs/dessert.png" },
+	{ type: "appetizer", poster: "https://i.ibb.co/HpGLzC6f/appetizer.png" }, { type: "bread", poster: "https://i.ibb.co/Swsj8Xxr/bread.png" }, { type: "soup", poster: "https://i.ibb.co/ZpgVtyjv/soup.png" }, { type: "beverage", poster: "https://i.ibb.co/V00w3H9Z/bevrage.png" }, { type: "sauce", poster: "https://i.ibb.co/cGFx24F/sauce.png" }, { type: "fingerfood", poster: "https://i.ibb.co/ynKnqvhZ/fingerfood.jpg" }, { type: "snack", poster: "https://i.ibb.co/h191GHGq/snacks.png" }, { type: "drink", poster: "https://i.ibb.co/zVbTHDwg/drinks.png" }
 ]
-

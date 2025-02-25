@@ -7,8 +7,7 @@ export const ContextProvider = createContext();
 const ContextAPI = ({ children }) => {
 	const [token, setToken] = useState(localStorage.getItem("token"))
 	const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")))
-	const [isAuth, setIsAuth] = useState(localStorage.getItem("token") ? true : false)
-	// const [isAuth, setIsAuth] = useState(true)
+	const [isAuth, setIsAuth] = useState(localStorage.getItem("token") ? true : false)	
 	const [message, setMessage] = useState("")
 	const [error, setError] = useState("")
 	const [popup, setPopup] = useState(false)
