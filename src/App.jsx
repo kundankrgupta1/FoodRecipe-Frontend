@@ -4,7 +4,7 @@ import AllRoutes from "./Routes/AllRoutes";
 import { ContextProvider } from "./Context/ContextAPI";
 
 // export const SERVER = "http://localhost:3000"
-export const SERVER = "https://foodrecipe-backend-6.onrender.com"
+export const SERVER = "https://foodrecipes-backend.onrender.com"
 // export const API = "b62222adb6df497bbfdfb33ee7310462"
 // export const API = "092e26df7455448eb75c97c2cafea446"
 // export const API = "5cddfd9396e348f5b7f35012fed9c403"
